@@ -1,0 +1,53 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif
+}
+.navigation_bar {
+    position: absolute;
+    display: flex;
+    background: rgba(255, 255, 255, 0);
+    height: 50px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    z-index: 1;
+}
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translate(100%, -50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+}
+
+.about_buttom {
+    position: relative;
+    left: 30%;
+    top: 50%;
+    transform: translate(0%, -25%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: normal;
+}
+
+.container_background_vignette {
+    position: absolute;
+    height: 900px;
+    width: 100%;
+}
+.background_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vignette {
+    position: absolute;
+    height: 900px;
+    width: 100%;
+    box-shadow: 0 150px 1000px rgb(0, 0, 0) inset;
+  }
