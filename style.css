@@ -2,79 +2,33 @@
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    font-family:Impact, 'Arial Narrow Bold', sans-serif
+    font-family: sans-serif;
+    overflow: auto;
 }
 .navigation_bar {
     position: absolute;
     display: flex;
-    background: rgba(255, 255, 255, 0);
-    height: 50px;
+    background: linear-gradient(rgb(162, 71, 204), rgb(198, 55, 226));
+    height: 150px;
     width: 100%;
-    backdrop-filter: blur(2px);
-    overflow: hidden;
     z-index: 1;
 }
 .logo {
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translate(100%, -50%);
+    height: 50px;
+    transform: translate(-100%, -50%);
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .about_buttom {
     position: relative;
-    left: 30%;
-    top: 50%;
-    transform: translate(0%, -25%);
+    height: 25px;
+    top:50%;
+    transform: translate(100%, -75%);
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgb(255, 255, 255);
     font-weight: normal;
 }
-
-.container_background_vignette {
-    position: absolute;
-    height: 650px;
-    width: 100%;
-
-}
-.container_background_vignette h2 {
-    position: absolute;
-    background: none;
-    font-size: 100px;
-    font-family:serif;
-    font-weight: lighter;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 99;
-    color: aliceblue;
-    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, 1));
-}
-.container_background_vignette p {
-    position: absolute;
-    background: none;
-    font-size: 20px;
-    font-family:serif;
-    font-weight: lighter;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 150%);
-    z-index: 99;
-    color: aliceblue;
-    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0, 1));
-}
-.background_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    color: aliceblue;
-}
-.vignette {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 150px 1000px rgb(0, 0, 0) inset;
-  }
