@@ -9,24 +9,35 @@
     position: absolute;
     display: flex;
     background: linear-gradient(rgb(162, 71, 204), rgb(198, 55, 226));
-    height: 150px;
+    height: 100px;
     width: 100%;
     z-index: 1;
 }
 .logo {
-    position: relative;
-    top: 50%;
-    height: 120px;
-    transform: translate(-100%, -50%);
+    height: 80px;
+    margin-left: 20px;
+}
+.insta,
+.reservas,
+.contatos {
+    margin-right: 20px;
+    color: #fff;
     cursor: pointer;
 }
 
-.about_buttom {
-    position: relative;
-    height: 25px;
-    top:50%;
-    transform: translate(100%, -75%);
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-weight: normal;
+@media only screen and (max-width: 768px) {
+    .navigation_bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin: 10px auto;
+    }
+
+    .insta,
+    .reservas,
+    .contatos {
+        margin: 10px auto;
+    }
 }
