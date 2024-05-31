@@ -54,13 +54,22 @@
 }
 .menu {
     position: fixed;
-    display: block;
+    display: none;
     top: 90px;
-    left: -200px; /* Começa escondido da esquerda */
+    left: -200px;
     width: 200px;
     height: 100%;
     background-color: #f1f1f1;
-    transition: left 0.4s; /* Adiciona uma transição suave */
+    transition: left 0.4s;
+}
+.overlay_shadowForMenu {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 .button_menu {
     position: relative;
@@ -103,9 +112,10 @@
     .options_nav {
         display: none;
     }
-    .insta,
-    .reservas,
-    .contatos {
-        margin: 10px auto;
+    .menu, .overlay_shadowForMenu {
+        display: block;
+    }
+    .menu-item{
+        font-weight: bolder;
     }
 }
