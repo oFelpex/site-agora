@@ -1,19 +1,23 @@
-function myFunction(button) {
-    button.classList.toggle("change");
+function openOrCloseMenu(open) {
     var menu = document.querySelector('.menu');
     var overlayForMenu = document.querySelector('.overlay_shadowForMenu');
-    if (button.classList.contains("change")) {
-        menu.style.left = '0';
-        overlayForMenu.style.display = 'block';
-        overlayForMenu.style.opacity = 1;
-        
-    } else {
-        menu.style.left = '-200px';
-        overlayForMenu.style.opacity = 0;
-        overlayForMenu.style.display = 'none';
-    }
-    overlayForMenu.addEventListener('click', function() {
-        var button = document.querySelector('.button_menu');
-        myFunction(button);
+    menu.style.left = open ? '0' : '-200px';
+    overlayForMenu.style.pointerEvents = open ? 'all' : 'none';
+    overlayForMenu.style.opacity = open ? 1 : 0;
+}
+function changeButton_menu(button) {
+    button.classList.toggle("change");
+    openOrCloseMenu(button.classList.contains("change"));
+    
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            button.classList.remove('change');
+            openOrCloseMenu(false);
+        }
     });
-  }
+}
+function closeMenu_overlayClicked() {
+    var button = document.querySelector('.button_menu');
+    changeButton_menu(button);
+}
+
