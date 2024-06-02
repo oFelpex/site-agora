@@ -50,11 +50,23 @@
     background: none;
     display: flex;
     margin-right: 50px;
-    width: 30%;
+    width: 300px;
 }
 .insta,
 .telefone,
-.email,
+.email {
+    background: none;
+    height: 40px;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.insta:hover,
+.telefone:hover,
+.email:hover {
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+
 .menu-item {
     background: none;
     font-family: Helvetica;
