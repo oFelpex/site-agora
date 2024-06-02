@@ -15,6 +15,7 @@ function changeButton_menu(button) {
             openOrCloseMenu(false);
         }
     });
+        
 }
 function closeMenu_overlayClicked() {
     var button = document.querySelector('.button_menu');
