@@ -1,15 +1,13 @@
 *{
     margin: 0 auto;
     padding: 0 auto;
-    box-sizing: border-box;
-    overflow: auto;
     text-decoration: none;
 }
 
 .orange_bar {
     position: relative;
     display: flex;
-    height: 40px;
+    height: 35px;
     width: 100%;
     align-items: center;
     background: #f48735;
@@ -131,6 +129,120 @@
     transform: translate(0, -11px) rotate(45deg);
 }
 
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+.slides {
+    width: 300%;
+    height: 600px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide {
+    width: 100%;
+    position: relative;
+}
+.slide img {
+    width: 100%;
+}
+.manual-navigation {
+    position: absolute;
+    width: 10%;
+    margin-top: -40px;
+    left: 70%;
+    display: flex;
+    z-index: 1;
+}
+.manual-btn {
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+.manual-btn:not(:last-child) {
+    margin-right: -40px;
+}
+.manual-btn:hover{
+    background-color: #FFF;
+}
+#radio1:checked ~ .about {
+    margin-left: 0;
+    transition: 0.5s;
+}
+#radio2:checked ~ .about {
+    margin-left: -50%;
+    transition: 0.5s;
+}
+#radio3:checked ~ .about {
+    margin-left: -200%;
+    transition: 0.5s;
+}
+.navigation_slider div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+.navigation_slider {
+    position: absolute;
+    width: 10%;
+    left: 70%;
+    margin-top: 560px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.navigation_slider div:not(:last-child) {
+    margin-right: -40px;
+}
+#radio1:checked ~ .navigation_slider .auto-btn1, 
+#radio2:checked ~ .navigation_slider .auto-btn2,
+#radio3:checked ~ .navigation_slider .auto-btn3{
+    background-color: #FFF;
+}
+.overlay_shadowForImages {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+.teste {
+    width: 20%;
+    height: 10px;
+    position: relative;
+    background-color: #ff0000;
+    left: 0%;
+}
+.title {
+    margin: 0;
+    position: relative;
+    font-size: 50px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    height: fit-content;
+    width: 70%;
+    color: #ffffff;
+}
+.title_about {
+    position: absolute;
+    height: fit-content;
+    width: 120%;
+    color: #ffffff;
+    text-align: justify;
+    margin-top: 40px;
+    top: 50%;
+    font-size: 20px;
+}
 @media only screen and (max-width: 768px) {
     .navigation_bar {
         flex-direction: row-reverse;
