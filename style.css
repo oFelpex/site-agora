@@ -34,7 +34,7 @@
     height: 90px;
     width: 100%;
     filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.168));
-    z-index: 1;
+    z-index: 2;
 }
 .logo {
     position: static;
@@ -66,34 +66,32 @@
 }
 
 .menu-item {
-    background: none;
-    font-family: Helvetica;
-    font-weight: lighter;
-    height: fit-content;
-    width: fit-content;
-    color: black;
-    cursor: pointer;
-    
-}
-.menu-item {
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 50px;
     top: 10px;
-    padding: 12px;
+    background: none;
+    display: flex;
+    font-family: Helvetica;
+    font-weight: lighter;
+    color: black;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 20px;
 }
 .menu-item:hover {
     background-color: #ccc;
 }
 .menu {
-    position: fixed;
+    position: absolute;
     display: none;
     top: 90px;
     left: -200px;
     width: 200px;
-    height: 100%;
+    height: 500%;
     background-color: #f1f1f1;
     transition: left 0.4s;
+    z-index: 1;
 }
 .overlay_shadowForMenu {
     position: absolute;
@@ -101,9 +99,10 @@
     pointer-events: none;
     opacity: 0;
     width: 100%;
-    height: 100%;
+    height: 500%;
     background-color: rgb(0, 0, 0, 0.25);
     transition: 0.4s;
+    z-index: 1;
 }
 
 .button_menu {
@@ -131,12 +130,12 @@
 
 .slider {
     margin: 0 auto;
-    width: 100%;
+    width: 300%;
     height: 600px;
-    overflow: hidden;
+
 }
 .slides {
-    width: 300%;
+    width: 100%;
     height: 600px;
     display: flex;
 }
@@ -172,16 +171,46 @@
 .manual-btn:hover{
     background-color: #FFF;
 }
+.image1 {
+    position: absolute;
+    top: -25%;
+}
+.image2 {
+    position: absolute;
+    top: -25%;
+}
+.image3 {
+    position: absolute;
+    top: -25%;
+}
 #radio1:checked ~ .about {
     margin-left: 0;
     transition: 0.5s;
 }
 #radio2:checked ~ .about {
-    margin-left: -50%;
+    margin-left: -60%;
     transition: 0.5s;
 }
+#radio2:checked ~ .temp {
+    margin-left: -50.5%;
+    width: 33.5%;
+    transition: 0.5s;
+}
+#radio2:checked ~ .port {
+    width: 35%;
+}
+
 #radio3:checked ~ .about {
     margin-left: -200%;
+    width: 50%;
+}
+#radio3:checked ~ .temp {
+    margin-left: -25%;
+    width: 50%;
+}
+#radio3:checked ~ .port {
+    margin-left: -10%;
+    width: 35%;
     transition: 0.5s;
 }
 .navigation_slider div{
@@ -216,30 +245,24 @@
     height: 300px;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
-.teste {
-    width: 20%;
-    height: 10px;
-    position: relative;
-    background-color: #ff0000;
-    left: 0%;
-}
+
 .title {
-    margin: 0;
-    position: relative;
+    position: absolute;
     font-size: 50px;
     font-family: Helvetica;
     font-weight: lighter;
     height: fit-content;
-    width: 70%;
+    width: 60%;
+    top: 40%;
+    left: 12%;
     color: #ffffff;
 }
 .title_about {
-    position: absolute;
     height: fit-content;
     width: 120%;
     color: #ffffff;
     text-align: justify;
-    margin-top: 40px;
+    margin-top: 5px;
     top: 50%;
     font-size: 20px;
 }
