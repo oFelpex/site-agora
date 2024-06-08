@@ -10,7 +10,7 @@
 #orangeBar_navigationBar {
     position: fixed;
     width: 100%;
-    z-index: 4;
+    z-index: 5;
 }
 .orange_bar {
     position: relative;

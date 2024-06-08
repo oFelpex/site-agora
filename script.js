@@ -17,8 +17,20 @@ function nextImage() {
     });
     startInterval();
 }
+function closeNavBar() {
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('orangeBar_navigationBar');
+        if (window.scrollY >= 800) {
+            navbar.style.position = 'absolute';
+            navbar.style.top = '800px';
+        } else {
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0px';
+        }
+    });
+}
 nextImage();
-
+closeNavBar();
 function openOrCloseMenu(open) {
     var menu = document.querySelector('.menu');
     var overlayForMenu = document.querySelector('.overlay_shadowForMenu');
