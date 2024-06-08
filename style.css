@@ -6,7 +6,7 @@
 #orangeBar_navigationBar {
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 4;
 }
 .orange_bar {
     position: relative;
@@ -25,7 +25,6 @@
     width: fit-content;
     color: #f1f1f1;
     cursor: pointer;
-    z-index: 3;
 }
 .agoraReserva:hover {
     color: black;
@@ -40,7 +39,6 @@
     height: 90px;
     width: 100%;
     filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.168));
-    z-index: 3;
 }
 .logo {
     position: static;
@@ -72,12 +70,6 @@
     transition: 0.5s;
 }
 
-#navigationMenuForMobile {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-}
 .menu-item {
     position: relative;
     width: 90%;
@@ -97,7 +89,7 @@
     background-color: #ccc;
 }
 .menu {
-    position: absolute;
+    position: fixed;
     display: none;
     top: 90px;
     left: -200px;
@@ -108,7 +100,7 @@
     z-index: 2;
 }
 .overlay_shadowForMenu {
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     pointer-events: none;
     opacity: 0;
@@ -170,42 +162,42 @@
     margin-top: -40px;
     left: 70%;
     display: flex;
-    z-index: 1;
+    z-index: 4;
 }
 .manual-btn {
     border: 2px solid #FFF;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.5s;
-    z-index: 1;
+    transition: 1s;
+    z-index: 4;
 }
 .manual-btn:hover{
     background-color: #FFF;
 }
 #radio1:checked ~ .about {
     margin-left: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 #radio2:checked ~ .about {
     margin-left: -35%;
-    transition: 0.5s;
+    transition: 1s;
 }
 #radio3:checked ~ .about {
     margin-left: -116.66%;
-    transition: 0.5s;
+    transition: 1s;
 }
 #radio4:checked ~ .about {
     margin-left: -525%;
-    transition: 0.5s;
+    transition: 1s;
 }
 .navigation_slider div{
     border: 2px solid blue;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.5s;
-    z-index: 1;
+    transition: 1s;
+    z-index: 3;
 }
 .navigation_slider {
     position: absolute;
@@ -214,14 +206,15 @@
     margin-top: 560px;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    z-index: 3;
 }
 .navigation_slider div:not(:last-child), .manual-btn:not(:last-child) {
     margin-right: 0px;
 }
 #radio1:checked ~ .navigation_slider .auto-btn1, 
 #radio2:checked ~ .navigation_slider .auto-btn2,
-#radio3:checked ~ .navigation_slider .auto-btn3{
+#radio3:checked ~ .navigation_slider .auto-btn3,
+#radio4:checked ~ .navigation_slider .auto-btn4{
     background-color: #FFF;
 }
 
