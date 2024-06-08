@@ -82,7 +82,7 @@
     background: none;
     display: flex;
     font-family: Helvetica;
-    font-weight: lighter;
+    font-weight: bolder;
     color: black;
     cursor: pointer;
     align-items: center;
@@ -233,7 +233,7 @@
     top: 0%;
     width: 100%;
     height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.801));
 }
 .title {
     position: absolute;
@@ -241,14 +241,14 @@
     font-family: Helvetica;
     font-weight: lighter;
     height: fit-content;
-    width: 70%;
+    width: 80%;
     top: 60%;
-    left: 8%;
+    left: 10%;
     color: #ffffff;
 }
 .title_about {
     height: fit-content;
-    width: 120%;
+    width: 100%;
     color: #ffffff;
     text-align: justify;
     margin-top: 5px;
@@ -277,9 +277,6 @@
     .menu {
         display: block;
     }
-    .menu-item{
-        font-weight: bolder;
-    }
     .slider {
         width: 100%;
         height: 600px;
@@ -294,16 +291,14 @@
         top: -5%;
     }
     .overlay_shadowForImages {
-        top: 59.5%;
-        height: 600px;
+        top: 5%;
     }
     .title {
-        width: 50%;
-        font-size: 1.5rem;
-        top: 20%;
-        left: 20%;
+        font-size: 2rem;
+        top: 60%;
+        left: 10%;
     }
     .title_about {
-        font-size: 0.65rem;
+        font-size: 1.15rem;
     }
 }
