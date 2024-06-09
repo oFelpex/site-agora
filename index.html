@@ -14,8 +14,8 @@
             <a href="https://www.instagram.com/institutoagoraufrn/">
                 <h3 class="menu-item">Instagram</h3>
             </a>
-            <h3 class="menu-item" onclick="copyAgoraNumber()">Telefone</h3>
-            <h3 class="menu-item">E-mail</h3>
+            <h3 class="menu-item" onclick="copyAgoraNumberOrEmail(1)">Telefone</h3>
+            <h3 class="menu-item" onclick="copyAgoraNumberOrEmail(2)">E-mail</h3>
             <h3 class="menu-item">Reservas</h3>
         </aside>
     </nav>
@@ -33,10 +33,10 @@
                     </a>
                 </li>
                 <li>
-                    <img src="assets/icons - navigation_bar/phone_icon.png" class="telefone" alt="Imagem de um telefone" onclick="copyAgoraNumber()">
+                    <img src="assets/icons - navigation_bar/phone_icon.png" class="telefone" alt="Imagem de um telefone" onclick="copyAgoraNumberOrEmail(1)">
                 </li>
                 <li>
-                    <img src="assets/icons - navigation_bar/gmail_icon.png" class="email" alt="Logo do g-mail">
+                    <img src="assets/icons - navigation_bar/gmail_icon.png" class="email" alt="Logo do g-mail" onclick="copyAgoraNumberOrEmail(2)">
                 </li>
             </ul>
             <button class="button_menu" onclick="changeButton_menu(this)">
@@ -48,9 +48,9 @@
     </header>
 
     <main>
-        <div class="AgoraAlert">
+        <div class="AgoraAlert_container">
             <h2>Número copiado</h2>
-            <img src="assets/backgroundAlert.jpg" class="containerAgoraForAlert">
+            <img src="assets/backgroundAlert.jpg" class="backgroundImageAgoraForAlert">
         </div>
         <section id="slider">
             <div class="slides">

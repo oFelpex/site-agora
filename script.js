@@ -53,16 +53,38 @@ function closeMenu_overlayClicked() {
     var button = document.querySelector('.button_menu');
     changeButton_menu(button);
 }
-function copyAgoraNumber() {
-    const numPhone = '(84) 3342-2257';
+function copyAgoraNumberOrEmail(copyThis) {
+    let copyWhat;
+    let alertWhat = document.querySelector('.AgoraAlert_container h2');
     const clicked = document.createElement('input');
-    clicked.value = numPhone;
+    switch(copyThis) {
+        case 1:
+            copyWhat = '(84) 3342-2257';
+            alertWhat.textContent = 'Número copiado!';
+            break;
+        case 2:
+            copyWhat = 'institutoagora2015@gmail.com';
+            alertWhat.textContent = 'E-mail copiado!';
+            break;
+    }
+    clicked.value = copyWhat;
     document.body.appendChild(clicked);
     clicked.select();
     document.execCommand('copy');
     document.body.removeChild(clicked);
-    alert_numberWasCopied();
+
+    startEndAnimationAlert();
 }
-function alert_numberWasCopied() {
+function startEndAnimationAlert() {
+    let startAnimationForAlert = document.querySelector('.AgoraAlert_container');
+    let timeOutId;
     
+    startAnimationForAlert.style.animation = 'none';
+    setTimeout(function() {
+        startAnimationForAlert.style.animation = 'AgoraAlert 1s ease-in-out 1 normal forwards, AgoraAlert 1s ease-in-out 3s 1 reverse forwards';
+        clearTimeout(timeOutId);
+    }, 10);
+    timeOutId = setTimeout(function() {
+        startAnimationForAlert.style.animation = 'none';
+    }, 4000);
 }
