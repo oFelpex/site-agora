@@ -282,7 +282,7 @@ body {
     font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .navigation_bar {
         flex-direction: row-reverse;
         height: auto;
