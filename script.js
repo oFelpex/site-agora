@@ -53,3 +53,16 @@ function closeMenu_overlayClicked() {
     var button = document.querySelector('.button_menu');
     changeButton_menu(button);
 }
+function copyAgoraNumber() {
+    const numPhone = '(84) 3342-2257';
+    const clicked = document.createElement('input');
+    clicked.value = numPhone;
+    document.body.appendChild(clicked);
+    clicked.select();
+    document.execCommand('copy');
+    document.body.removeChild(clicked);
+    alert_numberWasCopied();
+}
+function alert_numberWasCopied() {
+    
+}

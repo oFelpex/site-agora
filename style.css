@@ -1,8 +1,11 @@
 *{
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+body {
+    background-color: aliceblue;
 }
 :root {
     font-size: 100%;
@@ -73,7 +76,30 @@
     filter: grayscale(0);
     transition: 0.5s;
 }
-
+.AgoraAlert {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AgoraAlert h2{
+    position: absolute;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    color: #333;
+    white-space: nowrap;
+    z-index: 1;
+}
+.containerAgoraForAlert {
+    position: absolute;
+    border-radius: 10rem;
+    width: 350px;
+    height: 100px;
+    object-fit: cover;
+}
 .menu-item {
     position: relative;
     width: 90%;
@@ -256,7 +282,7 @@
     font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     .navigation_bar {
         flex-direction: row-reverse;
         height: auto;

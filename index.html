@@ -14,7 +14,7 @@
             <a href="https://www.instagram.com/institutoagoraufrn/">
                 <h3 class="menu-item">Instagram</h3>
             </a>
-            <h3 class="menu-item">Telefone</h3>
+            <h3 class="menu-item" onclick="copyAgoraNumber()">Telefone</h3>
             <h3 class="menu-item">E-mail</h3>
             <h3 class="menu-item">Reservas</h3>
         </aside>
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li>
-                    <img src="assets/icons - navigation_bar/phone_icon.png" class="telefone" alt="Imagem de um telefone">
+                    <img src="assets/icons - navigation_bar/phone_icon.png" class="telefone" alt="Imagem de um telefone" onclick="copyAgoraNumber()">
                 </li>
                 <li>
                     <img src="assets/icons - navigation_bar/gmail_icon.png" class="email" alt="Logo do g-mail">
@@ -48,6 +48,10 @@
     </header>
 
     <main>
+        <div class="AgoraAlert">
+            <h2>Número copiado</h2>
+            <img src="assets/backgroundAlert.jpg" class="containerAgoraForAlert">
+        </div>
         <section id="slider">
             <div class="slides">
                 <input type="radio" name="radio-btn" id="radio1" checked>
