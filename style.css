@@ -197,12 +197,12 @@ body {
     top: 5%;
 }
 .image3 {
-    margin-top: -5%;
+    /* margin-top: -5%; */
 }
 .slide img {
-    height: 700px;
+    height: 100%;
     width: 100%;
-    
+    object-fit:fill;
 }
 
 .manual-navigation {
@@ -328,9 +328,6 @@ body {
     }
     .slide {
         top: -5%;
-    }
-    .overlay_shadowForImages {
-        top: 5%;
     }
     .title {
         font-size: 2rem;
