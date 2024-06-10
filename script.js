@@ -19,7 +19,7 @@ function nextImage() {
 }
 function closeNavBar() {
     window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('orangeBar_navigationBar');
+        const navbar = document.getElementById('orangeBarNavigationBar');
         if (window.scrollY >= 800) {
             navbar.style.position = 'absolute';
             navbar.style.top = '800px';
@@ -33,12 +33,12 @@ nextImage();
 closeNavBar();
 function openOrCloseMenu(open) {
     var menu = document.querySelector('.menu');
-    var overlayForMenu = document.querySelector('.overlay_shadowForMenu');
+    var overlayForMenu = document.querySelector('.overlayShadowForMenu');
     menu.style.left = open ? '0' : '-200px';
     overlayForMenu.style.pointerEvents = open ? 'all' : 'none';
     overlayForMenu.style.opacity = open ? 1 : 0;
 }
-function changeButton_menu(button) {
+function changeButtonMenu(button) {
     button.classList.toggle("change");
     openOrCloseMenu(button.classList.contains("change"));
     window.addEventListener('resize', function() {
@@ -49,13 +49,13 @@ function changeButton_menu(button) {
     });
         
 }
-function closeMenu_overlayClicked() {
-    var button = document.querySelector('.button_menu');
-    changeButton_menu(button);
+function closeMenuOverlayClicked() {
+    var button = document.querySelector('.buttonMenu');
+    changeButtonMenu(button);
 }
 function copyAgoraNumberOrEmail(copyThis) {
     let copyWhat;
-    let alertWhat = document.querySelector('.AgoraAlert_container h2');
+    let alertWhat = document.querySelector('.AgoraAlertContainer h2');
     const clicked = document.createElement('input');
     switch(copyThis) {
         case 1:
@@ -76,7 +76,7 @@ function copyAgoraNumberOrEmail(copyThis) {
     startEndAnimationAlert();
 }
 function startEndAnimationAlert() {
-    let startAnimationForAlert = document.querySelector('.AgoraAlert_container');
+    let startAnimationForAlert = document.querySelector('.AgoraAlertContainer');
     let timeOutId;
     
     startAnimationForAlert.style.animation = 'none';
