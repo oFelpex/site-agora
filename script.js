@@ -1,7 +1,7 @@
 function nextImage() {
     let count = 2;
     let interval;
-    let slider = document.getElementById("slider");
+    const slider = document.getElementById("slider");
     function startInterval() {
         interval = setInterval(function() {
             document.getElementById("radio" + count).checked = true;
@@ -32,8 +32,8 @@ function closeNavBar() {
 nextImage();
 closeNavBar();
 function openOrCloseMenu(open) {
-    var menu = document.querySelector('.menu');
-    var overlayForMenu = document.querySelector('.overlayShadowForMenu');
+    const menu = document.querySelector('.menu');
+    const overlayForMenu = document.querySelector('.overlayShadowForMenu');
     menu.style.left = open ? '0' : '-200px';
     overlayForMenu.style.pointerEvents = open ? 'all' : 'none';
     overlayForMenu.style.opacity = open ? 1 : 0;
@@ -50,12 +50,12 @@ function changeButtonMenu(button) {
         
 }
 function closeMenuOverlayClicked() {
-    var button = document.querySelector('.buttonMenu');
+    const button = document.querySelector('.buttonMenu');
     changeButtonMenu(button);
 }
 function copyAgoraNumberOrEmail(copyThis) {
     let copyWhat;
-    let alertWhat = document.querySelector('.AgoraAlertContainer h2');
+    const alertWhat = document.querySelector('.AgoraAlertContainer h2');
     const clicked = document.createElement('input');
     switch(copyThis) {
         case 1:
@@ -76,7 +76,7 @@ function copyAgoraNumberOrEmail(copyThis) {
     startEndAnimationAlert();
 }
 function startEndAnimationAlert() {
-    let startAnimationForAlert = document.querySelector('.AgoraAlertContainer');
+    const startAnimationForAlert = document.querySelector('.AgoraAlertContainer');
     let timeOutId;
     
     startAnimationForAlert.style.animation = 'none';
