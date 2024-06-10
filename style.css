@@ -6,6 +6,7 @@
 }
 body {
     background-color: aliceblue;
+    font-family: Helvetica;
 }
 :root {
     font-size: 100%;
@@ -18,14 +19,14 @@ body {
 .orangeBar {
     position: relative;
     display: flex;
-    height: 35px;
+    height: 2.2rem;
     width: 100%;
     align-items: center;
     background: #f48735;
 }
 .agoraReserva {
     position: relative;
-    margin-right: 50px;
+    margin-right: 5rem;
     font-family: Helvetica;
     font-weight: lighter;
     height: fit-content;
@@ -43,15 +44,15 @@ body {
     display: inline-flex;
     align-items: center;
     background: aliceblue;
-    height: 90px;
+    height: 5.5rem;
     width: 100%;
-    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.168));
+    filter: drop-shadow(0rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2));
 }
 .logo {
     position: static;
     left: 0%;
-    height: 80px;
-    margin-left: 120px;
+    height: 5rem;
+    margin-left: 8rem;
     background: none;
 }
 .optionsNav {
@@ -59,24 +60,50 @@ body {
     list-style: none;
     background: none;
     display: flex;
-    margin-right: 50px;
-    width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 3.5rem;
+    width: 18.5rem;
 }
-.insta,
-.telefone,
-.email {
+.insta, .phone, .email {
     background: none;
-    height: 40px;
+    height: 2.5rem;
     cursor: pointer;
     filter: grayscale(1);
 }
-.insta:hover,
-.telefone:hover,
-.email:hover {
+.phone, .email {
+    margin-top: -5px;
+}
+header nav ul li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.textMessengeForNavBar {
+    font-size: 0.9rem;
+    padding: .3rem;
+    color: #d4d4d4;
+    border: .1rem solid black;
+    background-color: #4e4e4e;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
+    top: 80%;
+}
+.optionsNav li:hover .textMessengeForNavBar,
+.optionsNav li:hover .insta,
+.optionsNav li:hover .phone,
+.optionsNav li:hover .email{
+    visibility: visible;
     filter: grayscale(0);
     transition: 0.5s;
 }
-
 .AgoraAlertContainer {
     top: 120%;
     left: 50%;
